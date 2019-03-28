@@ -9,7 +9,7 @@ window.onload = () => {
 
 let deferredPrompt;
 var btnAdd = document.getElementsByClassName('add-button')[0];
-//btnAdd.style.display = 'none';
+btnAdd.style.display = 'none';
 
 window.addEventListener('beforeinstallprompt', (e) => {
   // Prevent Chrome 67 and earlier from automatically showing the prompt
