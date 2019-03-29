@@ -22,11 +22,11 @@ window.onload = () => {
   // doesn't already exist, it's cloned from the template.
 app.updateProductCard = function(data) {
   var dataLastUpdated = new Date(data.created);
-  var sunrise = data.name;
-  var sunset = data.name;
+  var sunrise = data.aisleName;
+  var sunset = data.price;
   var current = data.name;
   var humidity = data.name;
-  var wind = data.name;
+  var wind = data.departmentName;
   var img = data.image
 
   var card = app.visibleCards[data.id];
@@ -65,12 +65,10 @@ app.updateProductCard = function(data) {
   // card.querySelector('.current .temperature .value').textContent =
   //   Math.round(current.temp);
   card.querySelector('.current .sunrise').textContent = sunrise;
-  card.querySelector('.current .sunset').textContent = sunset;
-  card.querySelector('.current .humidity').textContent =
-    Math.round(humidity) + '%';
-  card.querySelector('.current .wind .value').textContent =
-    Math.round(wind.speed);
-  card.querySelector('.current .wind .direction').textContent = wind.direction;
+  card.querySelector('.current .sunset').textContent = '$ ' + sunset;
+  card.querySelector('.current .humidity').textContent = humidity;
+  card.querySelector('.current .wind .value').textContent = wind;
+  // card.querySelector('.current .wind .direction').textContent = wind.direction;
   var nextDays = card.querySelectorAll('.future .oneday');
   var today = new Date();
   today = today.getDay();
@@ -135,7 +133,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
   // Stash the event so it can be triggered later.
   deferredPrompt = e;
   // Update UI notify the user they can add to home screen
-  btnAdd.style.display = 'block';
+  //btnAdd.style.display = 'block';
 });
 
 

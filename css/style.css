@@ -291,16 +291,16 @@ body {
         -ms-flex-positive: 1;
             flex-grow: 1; }
   .weather-forecast .current .sunset:before {
-    content: "Sunset: ";
+    content: "Base Price: ";
     color: #888; }
   .weather-forecast .current .wind:before {
-    content: "Wind: ";
+    content: "Department Name: ";
     color: #888; }
   .weather-forecast .current .sunrise:before {
-    content: "Sunrise: ";
+    content: "Aisle Name: ";
     color: #888; }
   .weather-forecast .current .humidity:before {
-    content: "Humidity: ";
+    content: "Product Name: ";
     color: #888; }
   .weather-forecast .current .pollen:before {
     content: "Pollen Count: ";
